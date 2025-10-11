@@ -14,6 +14,9 @@ export default function Portfolio() {
 
   // Traducciones completas
   const translations = {
+
+
+    /************************************************************************************************************** */
     es: {
       roles: [
         "Desarrollador Full Stack",
@@ -116,6 +119,18 @@ export default function Portfolio() {
             ]
           },
           {
+            empresa: "Cisco Networking Academy",
+            puesto: "Certificación: Networking Basics",
+            periodo: "Octubre 2025",
+            descripcion:
+            "Fundamentos de redes de computadoras, abarcando dispositivos de red, direccionamiento IP y protocolos. Enfocado en diseño LAN/WAN, modelo OSI y configuración básica de routers y switches.",
+            logros: [
+              "Certificado emitido a: Salvador Antonio Pantoja Vera",
+              "Dominio de conceptos de TCP/IP, subneteo y fundamentos de enrutamiento.",
+              "Desarrollo de habilidades prácticas en configuración y resolución de problemas de red.",
+            ],
+          },
+          {
             empresa: "CETI (Centro de Enseñanzas Técnicas Industriales)",
             puesto: "Tecnólogo en Desarrollo de Software",
             periodo: "2022 - 2026 (Pendiente de Título)",
@@ -152,6 +167,12 @@ export default function Portfolio() {
         rights: "Hecho con ❤️ y React en Guadalajara, México"
       }
     },
+
+
+/************************************************************************************************************** */
+
+
+
     en: {
       roles: [
         "Full Stack Developer",
@@ -175,6 +196,8 @@ export default function Portfolio() {
         "Tech Explorer",
         "Digital Solutions Builder"
       ],
+
+
       nav: {
         home: "Home",
         about: "About Me",
@@ -183,11 +206,16 @@ export default function Portfolio() {
         contact: "Contact",
         downloadCV: "Download CV"
       },
+
+
       hero: {
         greeting: "Hi, I'm",
         viewWork: "View My Work",
         letsTalk: "Let's Talk"
       },
+
+
+
       about: {
         title: "About Me",
         subtitle: "Get to know my story and skills",
@@ -199,12 +227,18 @@ export default function Portfolio() {
           p3: "Today, I'm interested in continuing to learn through internships and collaborations, meeting people passionate about technology like me, willing to share their experiences and knowledge. I'm particularly drawn to areas like cybersecurity, DevOps, web and mobile development, and even electronics.",
           p4: "Beyond coding, I also like to maintain balance. I enjoy exercising to clear my mind or hanging out with friends to have a good time and recharge. I believe creativity also comes from those simple moments away from the screen."
         },
+
+
         badges: {
           learner: "Constant Learner",
           cleanCode: "Clean Code",
           problemSolver: "Problem Solver"
         }
       },
+
+
+
+
       projects: {
         title: "Featured Projects",
         subtitle: "Some of my most recent work",
@@ -234,6 +268,7 @@ export default function Portfolio() {
           }
         ]
       },
+
       experience: {
         title: "My Journey",
         subtitle: "Professional experience",
@@ -252,6 +287,18 @@ export default function Portfolio() {
             ]
           },
           {
+            empresa: "Cisco Networking Academy",
+            puesto: "Certification: Networking Basics",
+            periodo: "October 2025",
+            descripcion:
+            "Fundamentals of computer networking covering network devices, IP addressing, and protocols. Emphasis on LAN/WAN design, OSI model, and basic configuration of routers and switches.",
+            logros: [
+              "Certificate issued to: Salvador Antonio Pantoja Vera",
+              "Acquired strong understanding of TCP/IP, subnetting, and routing fundamentals.",
+              "Developed practical skills in network configuration and troubleshooting.",
+            ],
+          },
+          {
             empresa: "CETI (Centro de Enseñanzas Técnicas Industriales)",
             puesto: "Software Development Technologist",
             periodo: "2022 - 2026 (Degree Pending)",
@@ -263,6 +310,8 @@ export default function Portfolio() {
           }
         ]
       },
+
+
       contact: {
         title: "Let's Work Together!",
         subtitle: "Have a project in mind? Let's talk",
@@ -282,6 +331,8 @@ export default function Portfolio() {
           message: "Tell me about your project..."
         }
       },
+
+
       footer: {
         quote: "The people who are crazy enough to think they can change the world are the ones who do.",
         author: "Steve Jobs (Apple's 'Think Different' campaign, 1997)",
@@ -290,6 +341,8 @@ export default function Portfolio() {
     }
   };
 
+
+  /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   const t = translations[language];
   const roles = t.roles;
 
@@ -338,6 +391,8 @@ export default function Portfolio() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
   const proyectos = [
     {
@@ -398,20 +453,24 @@ export default function Portfolio() {
     { nombre: "Big Data Concepts", nivel: 70, categoria: "Data Engineering" },
     { nombre: "Project Documentation", nivel: 80, categoria: "Tools" }
   ];
-
+{/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/}
   const experiencias = [
     {
       empresa: "SoftServe Academy",
       puesto: "Certificación: Big Data Crash Course",
       periodo: "Julio 2025",
-      certificadoURL: "https://career.softserveinc.com/en-us/certification/verification"
+      certificadoURL: "/Certificate.pdf",
     },
-
+    {
+    empresa: "Cisco Networking Academy",
+    puesto: "Certificación: Networking Basics",
+    periodo: "Octubre 2025",
+    certificadoURL: "/CertificadoCisco.pdf",
+    },
     {
       empresa: "CETI",
       puesto: "Tecnólogo en Desarrollo de Software",
-      periodo: "2022 - 2026",
-      certificadoURL: "https://www.ceti.mx/"
+      periodo: "2022 - 2026"
       
     }
   ];
@@ -432,6 +491,11 @@ export default function Portfolio() {
     setFormData({ nombre: '', email: '', mensaje: '' });
   };
 
+
+
+
+
+  /*ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp*/
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white overflow-x-hidden">
       <style>{`
