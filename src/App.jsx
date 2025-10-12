@@ -14,9 +14,6 @@ export default function Portfolio() {
 
   // Traducciones completas
   const translations = {
-
-
-    /************************************************************************************************************** */
     es: {
       roles: [
         "Desarrollador Full Stack",
@@ -99,8 +96,6 @@ export default function Portfolio() {
           }
         ]
       },
-
-
       experience: {
         title: "Mi Trayectoria",
         subtitle: "Experiencia profesional",
@@ -167,12 +162,6 @@ export default function Portfolio() {
         rights: "Hecho con ❤️ y React en Guadalajara, México"
       }
     },
-
-
-/************************************************************************************************************** */
-
-
-
     en: {
       roles: [
         "Full Stack Developer",
@@ -196,8 +185,6 @@ export default function Portfolio() {
         "Tech Explorer",
         "Digital Solutions Builder"
       ],
-
-
       nav: {
         home: "Home",
         about: "About Me",
@@ -206,16 +193,11 @@ export default function Portfolio() {
         contact: "Contact",
         downloadCV: "Download CV"
       },
-
-
       hero: {
         greeting: "Hi, I'm",
         viewWork: "View My Work",
         letsTalk: "Let's Talk"
       },
-
-
-
       about: {
         title: "About Me",
         subtitle: "Get to know my story and skills",
@@ -227,18 +209,12 @@ export default function Portfolio() {
           p3: "Today, I'm interested in continuing to learn through internships and collaborations, meeting people passionate about technology like me, willing to share their experiences and knowledge. I'm particularly drawn to areas like cybersecurity, DevOps, web and mobile development, and even electronics.",
           p4: "Beyond coding, I also like to maintain balance. I enjoy exercising to clear my mind or hanging out with friends to have a good time and recharge. I believe creativity also comes from those simple moments away from the screen."
         },
-
-
         badges: {
           learner: "Constant Learner",
           cleanCode: "Clean Code",
           problemSolver: "Problem Solver"
         }
       },
-
-
-
-
       projects: {
         title: "Featured Projects",
         subtitle: "Some of my most recent work",
@@ -268,7 +244,6 @@ export default function Portfolio() {
           }
         ]
       },
-
       experience: {
         title: "My Journey",
         subtitle: "Professional experience",
@@ -310,8 +285,6 @@ export default function Portfolio() {
           }
         ]
       },
-
-
       contact: {
         title: "Let's Work Together!",
         subtitle: "Have a project in mind? Let's talk",
@@ -331,8 +304,6 @@ export default function Portfolio() {
           message: "Tell me about your project..."
         }
       },
-
-
       footer: {
         quote: "The people who are crazy enough to think they can change the world are the ones who do.",
         author: "Steve Jobs (Apple's 'Think Different' campaign, 1997)",
@@ -341,14 +312,10 @@ export default function Portfolio() {
     }
   };
 
-
-  /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
   const t = translations[language];
   const roles = t.roles;
-
   const [currentRole, setCurrentRole] = useState(0);
 
-  // Mouse tracking effect
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -391,8 +358,6 @@ export default function Portfolio() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
   const proyectos = [
     {
@@ -453,7 +418,7 @@ export default function Portfolio() {
     { nombre: "Big Data Concepts", nivel: 70, categoria: "Data Engineering" },
     { nombre: "Project Documentation", nivel: 80, categoria: "Tools" }
   ];
-{/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/}
+
   const experiencias = [
     {
       empresa: "SoftServe Academy",
@@ -462,16 +427,15 @@ export default function Portfolio() {
       certificadoURL: "/Certificate.pdf",
     },
     {
-    empresa: "Cisco Networking Academy",
-    puesto: "Certificación: Networking Basics",
-    periodo: "Octubre 2025",
-    certificadoURL: "/CertificadoCisco.pdf",
+      empresa: "Cisco Networking Academy",
+      puesto: "Certificación: Networking Basics",
+      periodo: "Octubre 2025",
+      certificadoURL: "/CertificadoCisco.pdf",
     },
     {
       empresa: "CETI",
       puesto: "Tecnólogo en Desarrollo de Software",
       periodo: "2022 - 2026"
-      
     }
   ];
 
@@ -491,11 +455,6 @@ export default function Portfolio() {
     setFormData({ nombre: '', email: '', mensaje: '' });
   };
 
-
-
-
-
-  /*ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp*/
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white overflow-x-hidden">
       <style>{`
@@ -586,7 +545,6 @@ export default function Portfolio() {
         }
       `}</style>
 
-      {/* Cursor personalizado */}
       <div 
         className="fixed w-6 h-6 border-2 border-red-400 rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out"
         style={{ 
@@ -596,7 +554,6 @@ export default function Portfolio() {
         }}
       />
 
-      {/* Partículas flotantes mejoradas */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {[...Array(30)].map((_, i) => (
           <div
@@ -616,7 +573,6 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Efecto de luz que sigue el mouse */}
       <div 
         className="fixed w-96 h-96 bg-red-500/10 rounded-full blur-3xl pointer-events-none z-0 transition-all duration-300"
         style={{
@@ -625,14 +581,13 @@ export default function Portfolio() {
         }}
       />
 
-      {/* NAVEGACIÓN MEJORADA */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-gray-900/95 backdrop-blur-xl shadow-2xl shadow-red-500/20 border-b border-red-500/20' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <h1 
             className="text-2xl font-bold gradient-text cursor-pointer hover:scale-110 transition-transform duration-300"
             onClick={() => scrollToSection('inicio')}
           >
-            {language === 'es' ? '💼 Mi Portafolio' : '💼 My Portfolio'}
+            {language === 'es' ? 'Mi Portafolio' : 'My Portfolio'}
           </h1>
           
           <div className="hidden md:flex gap-8 items-center">
@@ -670,7 +625,7 @@ export default function Portfolio() {
             </button>
             
             <a 
-              href="/Mi CV.pdf" 
+              href="/Salvador_Pantoja_CV.pdf" 
               download
               className="px-6 py-2.5 bg-gradient-to-r from-red-500 to-blue-500 rounded-full font-semibold hover:shadow-2xl hover:shadow-red-500/50 transition-all flex items-center gap-2 hover:scale-110 duration-300 animate-glow"
               onMouseEnter={() => setCursorVariant('hover')}
@@ -720,23 +675,16 @@ export default function Portfolio() {
         )}
       </nav>
 
-      {/* HERO SECTION ULTRA MEJORADO */}
-      <section id="inicio" className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
-        {/* Círculos animados de fondo */}
+      <section id="inicio" className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="max-w-5xl w-full space-y-8 fade-in-section relative z-10">
+        <div className="max-w-5xl w-full space-y-8 fade-in-section is-visible relative z-10">
           <div className="text-center space-y-6">
-            {/* Badge animado */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full text-red-300 text-sm mb-4 scale-in hover:scale-110 transition-transform duration-300">
-              <Sparkles size={16} className="animate-spin" />
-              <span className="font-semibold">Available for Opportunities</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            </div>
+          
 
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold leading-tight slide-in-left">
               {t.hero.greeting}{' '}
@@ -806,7 +754,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* SOBRE MÍ MEJORADO */}
+
       <section id="sobre-mi" className="py-20 px-4 fade-in-section relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -880,7 +828,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* PROYECTOS ULTRA MEJORADOS */}
       <section id="proyectos" className="py-20 px-4 fade-in-section">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -971,7 +918,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* EXPERIENCIA MEJORADA */}
       <section id="experiencia" className="py-20 px-4 bg-black/20 fade-in-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -1049,7 +995,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* CONTACTO MEJORADO */}
       <section id="contacto" className="py-20 px-4 bg-black/20 fade-in-section">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -1180,7 +1125,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* FOOTER MEJORADO */}
       <footer className="py-12 px-4 border-t border-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -1223,7 +1167,6 @@ export default function Portfolio() {
         </div>
       </footer>
 
-      {/* Botón scroll to top mejorado */}
       {scrolled && (
         <button
           onClick={() => scrollToSection('inicio')}
